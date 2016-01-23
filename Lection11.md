@@ -45,3 +45,13 @@ PostgreSQL предлагает несколько типов индексов:
 
 * GIN (перевернутые индексы) - индексы, которые могут обрабатывать значения, содержащие более одного ключа, например, массив.
   
+**<u>Создадим индексы для нашей базы данных:</u>**   
+
+CREATE INDEX id_person ON persons(id);  
+CREATE INDEX id_student ON students(id);  
+CREATE INDEX id_group ON groups(id);  
+CREATE INDEX id_subject ON subjects(id);  
+CREATE INDEX id_professor ON professors(id);  
+CREATE INDEX id_class ON classes(id);  
+
+
