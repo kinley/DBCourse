@@ -16,15 +16,15 @@
 * MIN - производит наименьшее из всех выбранных значений данного поля.
 
 -- узнаем сколько всего студентов учаться в университете.
-> SELECT SUM (student_count)                              |
+> SELECT SUM (student_count)                                
   FROM  groups;
 
 --запросим минимальное количество студентов среди всех групп.
->  SELECT MIN(g.student_count)
+>  SELECT MIN(g.student_count)  
    FROM groups g;
 
 --запросим все имеющиеся кафедры и количество профессоров, работающих в них 
- > SELECT DISTINCT  department, prof_count(department) AS i
+ > SELECT DISTINCT  department, prof_count(department) AS i  
   FROM professors;
 
   **Есть ли в PostgreSQL хранимые процедуры?**
@@ -36,7 +36,7 @@
   Функция может изменять данные или возращать их. Например:
 
   --функция, которая возвращает количество записей по конкретному значению кафедры
-  > CREATE FUNCTION prof_count(str VARCHAR) RETURNS integer AS '  
+  > CREATE FUNCTION prof_count(str VARCHAR) RETURNS integer AS '    
     DECLARE  
     i integer;  
 
